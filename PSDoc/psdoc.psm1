@@ -16,9 +16,12 @@ function Get-Hashtable {
         Write-Verbose "Loading data from $Path."
         Invoke-Expression "DATA { $(Get-Content -Raw -Path $Path) }"
     }    
+<#
+Copied from PowerShellOrg DSC module https://github.com/PowerShellOrg/DSC/blob/master/Tooling/DscDevelopment/DscDevelopment.psm1
+#>
 }
 
-Function Compile-Files
+Function Format-Files
 {
     [CmdletBinding()]
     param(
@@ -61,3 +64,5 @@ Function Compile-Files
     Compile-Files -Path ./ipwin-docs -OutputPath ./ipwin-docs/output -Verbose
 #>
 }
+
+Export-ModuleMember -Function Format-Files
