@@ -13,9 +13,20 @@ Convention based folder structure:
 
 ```
 config
+    foo.psd1
 content
+	overview.md
+	server.md
+	client.md
+	validation.md
+	architecture_long.md
+	module_dev.md
+	errata.md
 headers
+	internal.md
 output
+	foo.docx
+	foo.html
 ```
 
 Config file is a PowerShell hash structure that matches document order and placement
